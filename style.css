@@ -1,0 +1,224 @@
+/* Fonts ------------------------------------------------- */
+
+@font-face {
+  font-family: 'Font Name';
+  src: url('./fonts/font-name.eot');
+  src: url('./fonts/font-name.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/font-name.woff2') format('woff2'),
+       url('./fonts/font-name.woff') format('woff'),
+       url('./fonts/font-name.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'agpxregular';
+  src: url('fonts/agpx.eot');
+  src: url('fonts/agpx.eot?#iefix') format('embedded-opentype'),
+       url('fonts/agpx.woff2') format('woff2'),
+       url('fonts/agpx.woff') format('woff'),
+       url('fonts/agpx.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'ClashGrotesk-Extralight';
+  src: url('../fonts/ClashGrotesk-Extralight.woff2') format('woff2'),
+       url('../fonts/ClashGrotesk-Extralight.woff') format('woff'),
+       url('../fonts/ClashGrotesk-Extralight.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ClashGrotesk-Light';
+  src: url('../fonts/ClashGrotesk-Light.woff2') format('woff2'),
+       url('../fonts/ClashGrotesk-Light.woff') format('woff'),
+       url('../fonts/ClashGrotesk-Light.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ClashGrotesk-Regular';
+  src: url('../fonts/ClashGrotesk-Regular.woff2') format('woff2'),
+       url('../fonts/ClashGrotesk-Regular.woff') format('woff'),
+       url('../fonts/ClashGrotesk-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+/* Overall / Resets -------------------------------------- */
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'ClashGrotesk-Regular';
+  font-size: 15px;
+}
+
+body {
+  height: auto;
+  width: fit-content;
+  background-color: rgb(255, 255, 255);
+  padding: 4% 4% 2% 5%;
+  font-size: 15px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Text ------------------------------------------------- */
+
+h1 {
+  font-size: 50px;
+  color: rgb(0, 0, 0);
+}
+
+h2 {
+  font-size: 40px;
+  color: rgb(118, 154, 119);
+  text-transform: capitalize;
+}
+
+h3 {
+  font-family: 'ClashGrotesk-Extralight';
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  text-transform: capitalize;
+}
+
+h4 {
+  font-family: 'ClashGrotesk-Extralight';
+  font-size: 20px;
+  color: rgb(248, 182, 242);
+  text-transform: capitalize;
+  text-align: center;
+}
+img {
+  width: 60%;
+  position: relative;
+  align-items: center;
+  padding-bottom: 2%;
+}
+
+/* Links ----------------------------------------------- */
+
+a {
+  text-decoration: none;
+}
+
+a:link,
+a:visited {
+  color: rgb(0, 0, 0);
+}
+
+a:hover {
+  color: rgb(223, 139, 253);
+}
+
+a:active {
+  color: red;
+}
+
+/* Sections & Layout ----------------------------------- */
+
+.heading {
+  font-size: 30px;
+}
+
+section:first-of-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section:first-of-type > p {
+  font-family: 'ClashGrotesk-Regular';
+  padding: 0 10%;
+  color: rgb(46, 46, 46);
+  text-align: center;
+}
+
+section:first-of-type > p > span {
+  font-size: 30px;
+  text-transform: uppercase;
+  color: blue;
+}
+
+section:nth-of-type(3) > p > span1 {
+  color: rgb(255, 206, 244);
+}
+
+section:nth-of-type(3) > p > span2 {
+  color:  rgb(114, 151, 116);
+}
+
+section:nth-of-type(3) > p > span3 {
+  color: rgb(255, 206, 244);
+}
+
+#ex2 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px; /* Adds space between items */
+  padding: 10px; /* Adds space inside the container */
+}
+
+#ex2 > iframe {
+  flex-basis: calc(50% - 10px); /* Adjust for the gap */
+  aspect-ratio: 1 / 1; /* Makes the box square */
+  width: calc(50% - 10px); /* Adjust for the gap */
+  box-sizing: border-box; /* Ensure padding/border doesn't affect size */
+}
+
+#ex3, #ex3 > img,
+#ex4 > img {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.container section {
+  width: 48%;
+  font-size: 20px;
+  padding: 2% 5%;
+  border: 4px solid rgb(255, 206, 244);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Reset specific sections if needed */
+section.exclude-border,
+section:nth-of-type(11) {
+  border: none;
+  padding: 0;
+}
+
+section.exclude-border {
+  text-align: center; /* Centers the image horizontally */
+}
+
+.youtube-video {
+  text-align: center;
+}
+
+.youtube-video iframe {
+  display: inline-block;
+}

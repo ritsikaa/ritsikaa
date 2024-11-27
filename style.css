@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'Font Name';
-  src: url('fonts/font-name.eot');
-  src: url('fonts/font-name.eot?#iefix') format('embedded-opentype'),
-       url('fonts/font-name.woff2') format('woff2'),
-       url('fonts/font-name.woff') format('woff'),
-       url('fonts/font-name.ttf') format('truetype');
+  src: url('./fonts/font-name.eot');
+  src: url('./fonts/font-name.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/font-name.woff2') format('woff2'),
+       url('./fonts/font-name.woff') format('woff'),
+       url('./fonts/font-name.ttf') format('truetype');
   font-style: normal;
   font-weight: normal;
 }
@@ -24,9 +24,9 @@
 
 @font-face {
   font-family: 'ClashGrotesk-Extralight';
-  src: url('fonts/ClashGrotesk-Extralight.woff2') format('woff2'),
-       url('fonts/ClashGrotesk-Extralight.woff') format('woff'),
-       url('fonts/ClashGrotesk-Extralight.ttf') format('truetype');
+  src: url('../fonts/ClashGrotesk-Extralight.woff2') format('woff2'),
+       url('../fonts/ClashGrotesk-Extralight.woff') format('woff'),
+       url('../fonts/ClashGrotesk-Extralight.ttf') format('truetype');
   font-style: normal;
   font-weight: 200;
   font-display: swap;
@@ -34,9 +34,9 @@
 
 @font-face {
   font-family: 'ClashGrotesk-Light';
-  src: url('fonts/ClashGrotesk-Light.woff2') format('woff2'),
-       url('fonts/ClashGrotesk-Light.woff') format('woff'),
-       url('fonts/ClashGrotesk-Light.ttf') format('truetype');
+  src: url('../fonts/ClashGrotesk-Light.woff2') format('woff2'),
+       url('../fonts/ClashGrotesk-Light.woff') format('woff'),
+       url('../fonts/ClashGrotesk-Light.ttf') format('truetype');
   font-style: normal;
   font-weight: 300;
   font-display: swap;
@@ -44,9 +44,9 @@
 
 @font-face {
   font-family: 'ClashGrotesk-Regular';
-  src: url('fonts/ClashGrotesk-Regular.woff2') format('woff2'),
-       url('fonts/ClashGrotesk-Regular.woff') format('woff'),
-       url('fonts/ClashGrotesk-Regular.ttf') format('truetype');
+  src: url('../fonts/ClashGrotesk-Regular.woff2') format('woff2'),
+       url('../fonts/ClashGrotesk-Regular.woff') format('woff'),
+       url('../fonts/ClashGrotesk-Regular.ttf') format('truetype');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -66,7 +66,8 @@ html {
 
 body {
   height: auto;
-  width: fit-content;
+  width: 100vw;
+  overflow-x: hidden;
   background-color: rgb(255, 255, 255);
   padding: 4% 4% 2% 5%;
   font-size: 15px;
@@ -79,12 +80,12 @@ body {
 /* Text ------------------------------------------------- */
 
 h1 {
-  font-size: 50px;
+  font-size: 100px;
   color: rgb(0, 0, 0);
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 30px;
   color: rgb(118, 154, 119);
   text-transform: capitalize;
 }
@@ -143,7 +144,7 @@ section:first-of-type {
 
 section:first-of-type > p {
   font-family: 'ClashGrotesk-Regular';
-  padding: 0 10%;
+  max-width: 80%;
   color: rgb(46, 46, 46);
   text-align: center;
 }
@@ -152,6 +153,10 @@ section:first-of-type > p > span {
   font-size: 30px;
   text-transform: uppercase;
   color: blue;
+}
+section:nth-of-type(2) > img {
+  width: 100%;
+  max-width: 700px;
 }
 
 section:nth-of-type(3) > p > span1 {
@@ -170,15 +175,15 @@ section:nth-of-type(3) > p > span3 {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  gap: 10px; /* Adds space between items */
-  padding: 10px; /* Adds space inside the container */
+  gap: 10px; 
+  padding: 10px; 
 }
 
 #ex2 > iframe {
-  flex-basis: calc(50% - 10px); /* Adjust for the gap */
-  aspect-ratio: 1 / 1; /* Makes the box square */
-  width: calc(50% - 10px); /* Adjust for the gap */
-  box-sizing: border-box; /* Ensure padding/border doesn't affect size */
+  flex-basis: calc(50% - 10px); 
+  aspect-ratio: 1 / 1;
+  width: calc(50% - 10px); 
+  box-sizing: border-box; 
 }
 
 #ex3, #ex3 > img,
@@ -204,7 +209,7 @@ section:nth-of-type(3) > p > span3 {
   text-align: center;
 }
 
-/* Reset specific sections if needed */
+
 section.exclude-border,
 section:nth-of-type(11) {
   border: none;
@@ -212,7 +217,7 @@ section:nth-of-type(11) {
 }
 
 section.exclude-border {
-  text-align: center; /* Centers the image horizontally */
+  text-align: center; 
 }
 
 .youtube-video {
@@ -220,5 +225,8 @@ section.exclude-border {
 }
 
 .youtube-video iframe {
-  display: inline-block;
+  width: 100%;
+  height: auto;
+  max-width: 700px;
+  aspect-ratio: 16/9;  
 }

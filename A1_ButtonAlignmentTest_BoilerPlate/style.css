@@ -1,0 +1,305 @@
+/* Fonts ------------------------------------------------- */
+@font-face {
+  font-family: 'aybce_garamonoregular';
+  src: url('fonts/aybcegaramono-regular.eot');
+  src: url('fonts/aybcegaramono-regular.eot?#iefix') format('embedded-opentype'),
+       url('fonts/aybcegaramono-regular.woff2') format('woff2'),
+       url('fonts/aybcegaramono-regular.woff') format('woff'),
+       url('fonts/aybcegaramono-regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'kricooutlineobliqueoblique';
+  src: url('fonts/kricooutlineoblique-webfont.eot');
+  src: url('fonts/kricooutlineoblique-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/kricooutlineoblique-webfont.woff2') format('woff2'),
+       url('fonts/kricooutlineoblique-webfont.woff') format('woff'),
+       url('fonts/kricooutlineoblique-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'optiexcelsiorscriptregular';
+  src: url('fonts/optiexcelsiorscript-webfont.eot');
+  src: url('fonts/optiexcelsiorscript-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/optiexcelsiorscript-webfont.woff2') format('woff2'),
+       url('fonts/optiexcelsiorscript-webfont.woff') format('woff'),
+       url('fonts/optiexcelsiorscript-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'estrellaearly';
+  src: url('fonts/estrella-early-webfont.woff2') format('woff2'),
+       url('fonts/estrella-early-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+/* Overall / Resets -------------------------------------- */
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: -0.2px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+/* Header Styling */
+header {
+  height: 80px;
+  width: 100%;
+  background-color: rgb(247, 200, 227) ;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: whitesmoke ;
+  font-family: Arial, Helvetica, sans-serif ;
+}
+
+/* Actual Styling -------------------------------------- */
+main {
+  padding: 10px;
+  height: calc(100vh - 40px);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+  background-color: rgb(249, 238, 240);
+}
+
+main > div {
+  flex-basis: 33%;
+  flex-grow: 1;
+  width: 33%;
+  height: 33%;
+  border: 0.5px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+main > div > h2 {
+  position: absolute;
+  bottom: 5px;
+  font-size: 1.1rem;
+}
+
+/* Button Styles for Alignments */
+button {
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.lawful-goodie {
+  background-color: #f9ddf4;
+  border-radius: 34px;
+  color: rgb(0, 0, 0);
+  transition: transform 0.3s;
+  font-family: 'optiexcelsiorscriptregular';
+  font-size: 2rem;
+  box-shadow: 0 0 10px #f9ddf4;
+  padding: 1rem;
+}
+
+.lawful-goodie:hover{
+background-color: white;
+color: pink;
+}
+
+.lawful-goodie:hover {
+  transform: scale(1.1);
+}
+
+.neutral-goodie {
+  background-color: #1d096c;
+  color: white;
+  transition: transform 0.3s;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.neutral-goodie:hover {
+  transform: rotate(100deg);
+}
+
+.chaotic-goodie {
+  background-color: #FFC107;
+  color: white;
+  border: 2px dashed red;
+  animation: bounce 2s infinite;
+  font-family: 'kricooutlineobliqueoblique';
+  font-size: 2rem;
+}
+.chaotic-goodie:hover{
+ background-color: cornflowerblue;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.lawful-neutral {
+  background-color: #2e573c;
+  color: rgb(150, 213, 233);
+  position: relative;
+  overflow: hidden;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.lawful-neutral:hover::before {
+  content: '🍵🎐🍀';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: riseFlowers 2s ease-in-out forwards;
+}
+
+@keyframes riseFlowers {
+  to {
+    bottom: 50px;
+  }
+}
+
+.true-neutral {
+  color: black;
+  background-color: whitesmoke;
+  font-family: Helvetica ;
+  border-radius: 15px;
+  padding: 2%;
+}
+
+.true-neutral:hover {
+
+background-color: #000000;
+color:whitesmoke ;
+}
+
+.chaotic-neutral {
+  background-color: whitesmoke;
+  color: black;
+  position: relative;
+  font-size: 8px;
+  padding:10%;
+}
+
+.chaotic-neutral:hover {
+  font-family: 'estrellaearly';
+  transform: scale(3);
+  transition: 1s;
+  color: rgb(53, 207, 53);
+  background-color:#1d096c;
+  padding: unset;
+  font-size: unset;
+  font-size: 2rem;
+  border-radius: 24px;
+}
+
+.lawful-evil {
+  background-color: #673AB7;
+  color: rgb(255, 0, 0);
+  position: relative;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 5rem;
+}
+
+.lawful-evil:hover {
+color:#673AB7;
+background-color: azure;
+}
+
+@keyframes slither {
+  to {
+    bottom: 50px;
+  }
+}
+
+.neutral-evil {
+  background-color: #ebee13;
+  color: rgb(204, 231, 50);
+  position: relative;
+  font-family:'Courier New', Courier, monospace;
+}
+
+
+.chaotic-evil {
+  background-color: red;
+  color: whitesmoke;
+  animation: flames 2s infinite;
+  box-shadow: 0 0 10px red;
+  font-family: 'kricooutlineobliqueoblique';
+  border-radius: 25px;
+}
+
+@keyframes flames {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px red;
+  }
+  50% {
+    transform: scale(4);
+    box-shadow: 0 0 30px red;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px red;
+  }
+}
+
+/* Small Screen Warning */
+.small-screen {
+  display: none;
+}
+
+@media screen and (max-width:640px) {
+  main {
+    display: none;
+  }
+  .small-screen {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 40px);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
